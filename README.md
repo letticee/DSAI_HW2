@@ -5,25 +5,27 @@
 * add : 在第 36 epoch, val_acc 達到 90%, 在第 109 epoch, val_acc 達到最高 99%
   * ![](https://imgur.com/okX0NZB.png)
 * sub : 在第 83 epoch, val_acc 達到 90%, 在第 137 epoch, val_acc 達到最高 96%
+  * 答案設定為和題目一樣的位數
+（若設定為比題目多一位，在第 44 epoch, val_acc 達到 90%, 在第 89 epoch, val_acc 達到最高 97%，仍然比加法低？）
   * ![](https://imgur.com/rTIr7hp.png)
 * combine : 在第 167 epoch, val_acc 達到最高 88%
+  * 比加法和減法慢收斂
   * ![](https://imgur.com/lqYTezh.png)
 * test acc : 在 test 時候，我不是用 model 的 evaluation，而是當整個算式正確，才視為正確 (與訓練時的以每一位數去計算不同)
   * add : 0.9651
   * sub : 0.8976								
   * combine : 0.5943
-* 減法比加法慢收斂，將加法和減法合在一起更慢收斂
 * 當 val_acc 越高時，正確的算式率也會越高，但當 val_acc 較低時，正確的算式率會下降很快（非線性速度）
 
 ### Different number of digits (add, 200 epoch)
 * 3 digits : 在第 36 epoch, val_acc 達到 90%, 在第 109 epoch, val_acc 達到 99%
   * ![](https://imgur.com/okX0NZB.png)
 * 5 digits : 在第 50 epoch, val_acc 達到 66%
+  * 猜測是因為 train data 不足導致 5 digits 的時候收斂在正確率比較低的地方
   * ![](https://imgur.com/EZg2tc9.png)
 * test acc : 
   * 3 digits : 96.51%
   * 5 digits : 10.28%
-* 猜測是因為 train data 不足導致 5 digits 的時候收斂在正確率比較低的地方
   
 ### Training size (add, 200 epoch, 3 digits)
 * training data 都是取全部資料的 1/4
