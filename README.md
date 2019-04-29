@@ -13,7 +13,7 @@
   * sub : 0.8976								
   * combine : 0.5943
 * 減法比加法慢收斂，將加法和減法合在一起更慢收斂
-* 當 val_acc 越高時 正確的算式率也會越高，但當 val_acc 較低時，正確的算式率會下降很快
+* 當 val_acc 越高時，正確的算式率也會越高，但當 val_acc 較低時，正確的算式率會下降很快（非線性速度）
 
 ### Different number of digits (add, 200 epoch)
 * 3 digits : 在第 36 epoch, val_acc 達到 90%, 在第 109 epoch, val_acc 達到 99%
@@ -39,7 +39,7 @@
 * 在第 88 epoch, val_acc 達到 58%
   * ![](https://imgur.com/Y9mADke.png)
 * test acc : 1.3%
-* test acc 這麼小是因為答案可能會到達六位數，而訓練的時候是以每一位為單位訓練的
+* test acc 這麼小是因為答案可能會到達六位數，而訓練的時候是以每一位為單位訓練的。因此相同位數的乘法，需要比加法更多的 training data
 
 
   
