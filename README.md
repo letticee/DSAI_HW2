@@ -1,5 +1,13 @@
 # DSAI_HW2
-## Analyze the results
+## Coding Part
+* [add](https://nbviewer.jupyter.org/github/letticee/DSAI_HW2/blob/master/Addition.ipynb)
+  * [add - 5 digits](https://nbviewer.jupyter.org/github/letticee/DSAI_HW2/blob/master/Addition5digits.ipynb)
+  * [add - half training data](https://nbviewer.jupyter.org/github/letticee/DSAI_HW2/blob/master/Addition10000_40000.ipynb)
+* [sub](https://nbviewer.jupyter.org/github/letticee/DSAI_HW2/blob/master/Subtraction.ipynb)
+* [combine](https://github.com/letticee/DSAI_HW2/blob/master/Combine.ipynb)
+* [mul](https://nbviewer.jupyter.org/github/letticee/DSAI_HW2/blob/master/Multiplication.ipynb)
+
+## Analyze the Results
 * RNN皆爲兩層的LSTM
 ### Training epoch (3 digits)
 * add : 在第 36 epoch, val_acc 達到 90%, 在第 109 epoch, val_acc 達到最高 99%
